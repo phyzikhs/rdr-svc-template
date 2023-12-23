@@ -1,0 +1,92 @@
+name: pipeline-hetzner
+on:
+  push:
+    branches:
+      - v2-develop
+      - v2-staging
+      - v2-uat
+env:
+  PROJECT_NAME: radioretail
+  PROJECT_VERSION: 2
+  APPLICATION_NAME: rdr-svc-template
+
+jobs:
+  compile-application:
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/setup-java@v1
+        with:
+          java-version: '11'
+      - uses: actions/checkout@v2
+      - uses: actions/cache@v2
+        with:
+          path: |
+            ~/.m2
+            ~/.sbt
+            ~/.ivy2/cache
+            ~/.cache/coursier/v1
+            ~/.coursier/cache/v1
+          key: ${{ runner.os }}-sbt-${{ hashFiles('**/build.sbt') }}
+          restore-keys: ${{ runner.os }}-sbt-
+      - name: Build Application
+        env:
+          GITHUB_TOKEN: ${{ secrets.ACTIONS_PAT }}
+        run: sbt assembly
+      - uses: actions/upload-artifact@v2
+        with:
+          name: artifacts
+          path: |
+            Dockerfile
+            application.jar
+  build-and-push-docker-image:
+    needs: compile-application
+    runs-on: ubuntu-18.04
+    env:
+      BRANCH: ${GITHUB_REF##*/}
+      SHORT_HASH: $(git rev-parse --short "$GITHUB_SHA")
+    steps:
+      - uses: actions/download-artifact@v2
+        with:
+          name: artifacts
+      - uses: google-github-actions/setup-gcloud@v0.2.0
+        with:
+          project_id: ${{ secrets.GOOGLE_PROJECT_ID }}
+          service_account_key: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}
+          export_default_credentials: true
+      - name: Build and Push Docker Image
+        run: |
+          gcloud auth configure-docker eu.gcr.io -q
+          docker build -t eu.gcr.io/${{ secrets.GOOGLE_PROJECT_ID }}/${{ env.PROJECT_NAME }}/${{ env.PROJECT_VERSION }}/${{ env.APPLICATION_NAME }}:${{ github.sha }} .
+          docker push eu.gcr.io/${{ secrets.GOOGLE_PROJECT_ID }}/${{ env.PROJECT_NAME }}/${{ env.PROJECT_VERSION }}/${{ env.APPLICATION_NAME }}:${{ github.sha }}
+  deployment-rollout-image:
+    needs: build-and-push-docker-image
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Install OpenVPN Dependencies
+        run: |
+          sudo apt update
+          sudo apt-get install openvpn
+      - uses: allenevans/set-env@v2.0.0
+        with:
+          OVPN_CONFIG: ${{ secrets.OVPN_CONFIG }}
+      - name: Write OpenVPN Config Files
+        run: echo "$OVPN_CONFIG" > client.ovpn
+      - name: Start OpenVPN
+        run: sudo openvpn --config client.ovpn --daemon
+      - uses: azure/k8s-set-context@v1
+        with:
+          method: kubeconfig
+          context: github-actions
+          kubeconfig: ${{ secrets.KUBE_CONFIG }}
+      - name: Deploy to Develop
+        if: ${{ github.ref == 'refs/heads/v2-develop' }}
+        run: kubectl -n v2-radioretail-dev set image deployment/${{ env.APPLICATION_NAME }} ${{ env.APPLICATION_NAME }}=eu.gcr.io/${{ secrets.GOOGLE_PROJECT_ID }}/${{ env.PROJECT_NAME }}/${{ env.PROJECT_VERSION }}/${{ env.APPLICATION_NAME }}:${{ github.sha }}
+      - name: Deploy to Staging
+        if: ${{ github.ref == 'refs/heads/v2-staging' }}
+        run: kubectl -n v2-radioretail-staging set image deployment/${{ env.APPLICATION_NAME }} ${{ env.APPLICATION_NAME }}=eu.gcr.io/${{ secrets.GOOGLE_PROJECT_ID }}/${{ env.PROJECT_NAME }}/${{ env.PROJECT_VERSION }}/${{ env.APPLICATION_NAME }}:${{ github.sha }}
+      - name: Deploy to UAT
+        if: ${{ github.ref == 'refs/heads/v2-uat' }}
+        run: kubectl -n v2-radioretail-uat set image deployment/${{ env.APPLICATION_NAME }} ${{ env.APPLICATION_NAME }}=eu.gcr.io/${{ secrets.GOOGLE_PROJECT_ID }}/${{ env.PROJECT_NAME }}/${{ env.PROJECT_VERSION }}/${{ env.APPLICATION_NAME }}:${{ github.sha }}
+      - name: kill vpn
+        if: always()
+        run: sudo killall openvpn

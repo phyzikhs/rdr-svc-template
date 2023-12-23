@@ -1,0 +1,12 @@
+[
+  {
+    "data" : "<p>{{title}} voice over has been deleted by an administrator.<br/><br/>Voice over details:<br/><table><tr><td>Agency: {{agencyName}}</td></tr><tr><td>Contact email: {{email}}</td><td>Contact number: {{contact}}</td></tr></table><br/>This was performed by {{updatedBy}} on {{date}}.</p>",
+    "name" : "VoiceOverDeletedTemplate",
+    "type" : "Message"
+  },
+  {
+    "data" : "<p>{{title}} voice over has been deleted by an administrator.<br/><br/>Voice over details:<br/><table><tr><td>Agency: {{agencyName}}</td></tr><tr><td>Contact email: {{email}}</td><td>Contact number: {{contact}}</td></tr></table><br/>If you believe this to be in error, please contact our support team.<br/>The Radio Retail team.</p>",
+    "name" : "VoiceOverDeletedTemplate",
+    "type" : "Email"
+  }
+]

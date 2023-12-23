@@ -1,0 +1,4 @@
+{
+  "service" : "rdr-svc-template",
+  "enforcementMode" : "DISABLED"
+}

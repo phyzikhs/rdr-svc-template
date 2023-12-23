@@ -1,0 +1,7 @@
+[
+  {
+    "data" : "<p>{{title}} store list has been deleted by {{updatedBy}} on {{date}}.<p>",
+    "name" : "StoreListDeletedTemplate",
+    "type" : "Message"
+  }
+]

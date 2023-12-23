@@ -1,0 +1,17 @@
+[
+  {
+    "data" : "<p>{{title}} track has been marked as inactive.<br><br>Track Details:<table><tr><td>Media ID: {{code}}<td>Album: {{album}}<tr><td>Record company: {{company}}<td>Genre: {{genre}}<tr><td>Expiry date: {{expiryDate}}<td>Duration: {{duration}}</table>Artists: {{for data in artists}}<li>{{data.name}}</li>{{/for}}<br><br>This was performed by {{updatedBy}} on {{date}}.",
+    "name" : "TrackInactiveTemplate",
+    "type" : "Message"
+  },
+  {
+    "data" : "<p>{{title}} track has been deleted by an administrator.<br><br>Track Details:<table><tr><td>Media ID: {{code}}<td>Album: {{album}}<tr><td>Record company: {{company}}<td>Genre: {{genre}}<tr><td>Expiry date: {{expiryDate}}<td>Duration: {{duration}}</table>Artists: {{for data in artists}}<li>{{data.name}}</li>{{/for}}<br><br>This was performed by {{updatedBy}} on {{date}}.",
+    "name" : "TrackDeletedTemplate",
+    "type" : "Message"
+  },
+  {
+    "data" : "<p>{{title}} track has been deleted by an administrator.<br><br>Track Details:<table><tr><td>Media ID: {{code}}<td>Album: {{album}}<tr><td>Record company: {{company}}<td>Genre: {{genre}}<tr><td>Expiry date: {{expiryDate}}<td>Duration: {{duration}}</table>Artists: {{for data in artists}}<li>{{data.name}}</li>{{/for}}<br><br>If you believe this to be in error, please contact our support team.<br>The Radio Retail team.",
+    "name" : "TrackDeletedTemplate",
+    "type" : "Email"
+  }
+]

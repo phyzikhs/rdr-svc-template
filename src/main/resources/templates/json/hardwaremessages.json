@@ -1,0 +1,12 @@
+[
+  {
+    "data" : "<p>{{hardware.name}} hardware device has been deleted by an administrator.<br/><br/>Device details:<br/><table><tr><td>Device ID: {{hardware.code}}</td><td>Device Model: {{hardware.model}}</td></tr><tr><td>GTIN: REPLACEME</td><td>Firmware: {{hardware.firmware}}</td></tr><tr><td>IPAddress: {{hardware.ipAddress}}</td><td>Gateway: {{hardware.gateway}}</td></tr><tr><td>Mask: {{hardware.mask}}</td><td>Last online: {{lastOnline}}</td></tr><tr><td>Client: {{clientName}}</td><td>Account: {{accountName}}</td></tr><tr><td>Store ID: {{storeCode}}</td><td>Store: {{storeName}}</td></tr></table><br/>This was performed by {{updatedBy}} on {{date}}.</p>",
+    "name" : "HardwareDeletedTemplate",
+    "type" : "Message"
+  },
+  {
+    "data" : "<p>{{hardware.name}} hardware device has been deleted by an administrator.<br/><br/>Device details:<br/><table><tr><td>Device ID: {{hardware.code}}</td><td>Device Model: {{hardware.model}}</td></tr><tr><td>GTIN: REPLACEME</td><td>Firmware: {{hardware.firmware}}</td></tr><tr><td>IPAddress: {{hardware.ipAddress}}</td><td>Gateway: {{hardware.gateway}}</td></tr><tr><td>Mask: {{hardware.mask}}</td><td>Last online: {{lastOnline}}</td></tr><tr><td>Client: {{clientName}}</td><td>Account: {{accountName}}</td></tr><tr><td>Store ID: {{storeCode}}</td><td>Store: {{storeName}}</td></tr></table><br/>If you believe this to be in error, please contact our support team.<br/>The Radio Retail team.</p>",
+    "name" : "HardwareDeletedTemplate",
+    "type" : "Email"
+  }
+]

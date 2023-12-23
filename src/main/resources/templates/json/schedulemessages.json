@@ -1,0 +1,77 @@
+[
+  {
+    "data": "<p>{{title}}broadcast has been deleted by an administrator.<br><br> Schedule details:<br> Schedule ID:{{details.id}}<br> <table> <tr><td>Schedule start date:{{scheduleDetails.from}}</td><td>Schedule end date:{{scheduleDetails.to}}</td></tr></table> Store list: <table>{{for data in stores}}<tr><td>{{data.storeCode}}</td><td>{{data.storeName}}</td><td>{{data.accountName}}</td></tr>{{/for}}</table> <br> This was performed by{{userName}}}on{{date}}.</p>",
+    "name": "FormatClockBroadcastDeletedTemplate",
+    "type": "Message"
+  },
+  {
+    "data": "<p>{{title}} schedule has been deleted by an administrator.<br><br><table>Schedule details:<tr><td>Schedule ID: {{code}}<tr><td>Schedule start date: {{from}}<td>Schedule end date: {{to}}</table><br>Format clocks:<ul>{{for data in itemNames}}<li>{{data.name}}</li>{{/for}}</ul><table><tr><td>Store list:</tr>{{for data in stores}}<tr><td>{{data.storeCode}}<td>{{data.storeName}}<td>{{data.accountName}}</tr>{{/for}}</table><br>This was performed by {{updatedBy}}} on {{date}}.",
+    "name": "FormatClockScheduleDeletedTemplate",
+    "type": "Message"
+  },
+  {
+    "data": "<p>{{title}}broadcast has been deleted by an administrator.<br><br> Schedule details:<br> Schedule ID:{{details.id}}<br> <table> <tr><td>Schedule start date:{{scheduleDetails.from}}</td><td>Schedule end date:{{scheduleDetails.to}}</td></tr></table> Music profile:<br> <ul>{{for data in itemNames}}<li>{{data.name}}</li>{{/for}}</ul><br> Store list: <table>{{for data in stores}}<tr><td>{{data.storeCode}}</td><td>{{data.storeName}}</td><td>{{data.accountName}}</td></tr>{{/for}}</table> <br> This was performed by{{userName}}}on{{date}}.</p>",
+    "name": "MusicProfileBroadcastDeletedTemplate",
+    "type": "Message"
+  },
+  {
+    "data": "<p>{{title}} schedule has been deleted by an administrator.<br><br><table>Schedule details:<tr><td>Schedule ID: {{code}}<tr><td>Schedule start date: {{from}}<td>Schedule end date: {{to}}</table><br>Music Profiles:<ul>{{for data in itemNames}}<li>{{data.name}}</li>{{/for}}</ul><table><tr><td>Store list:</tr>{{for data in stores}}<tr><td>{{data.storeCode}}<td>{{data.storeName}}<td>{{data.accountName}}</tr>{{/for}}</table><br>This was performed by {{updatedBy}}} on {{date}}.",
+    "name": "MusicProfileScheduleDeletedTemplate",
+    "type": "Message"
+  },
+  {
+    "data": "<p>{{title}} schedule has been deleted by an administrator.<br><br>Schedule details:<table><tr><td>Schedule ID:{{code}}<td>Schedule type:{{type}}<tr><td>Schedule start date:{{from}}<td>Schedule end date:{{to}}<tr><td><tr><td>Media details:<tr><td>Media ID:{{mediaDetails.code}}<td>Media type:{{mediaDetails.type}}<tr><td>Priority:{{mediaDetails.priority}}<td>Language:{{mediaDetails.language}}</table><br>Stores:<table>{{for data in stores}}<tr><td>{{data.storeCode}}<td>{{data.storeName}}<td>{{data.accountName}}</tr>{{/for}}</table><br>This was performed by {{updatedBy}} on {{date}}.",
+    "name": "MediaScheduleDeletedTemplate",
+    "type": "Message"
+  },
+  {
+    "data": "<p>Schedule details:<table><tr><td>Schedule ID:{{code}}<td>Schedule type:{{type}}<tr><td>Schedule start date:{{from}}<td>Schedule end date:{{to}}<tr><td><tr><td>Media details:<tr><td>Media ID:{{mediaDetails.code}}<td>Media type:{{mediaDetails.type}}<tr><td>Priority:{{mediaDetails.priority}}<td>Language:{{mediaDetails.language}}</table><br>Stores:<table>{{for data in stores}}<tr><td>{{data.storeCode}}<td>{{data.storeName}}<td>{{data.accountName}}</tr>{{/for}}</table><br>This was performed by {{updatedBy}} on {{date}}.",
+    "name": "MediaScheduleFlightEndedTemplate",
+    "type": "Message"
+  },
+  {
+    "data": "<p>Schedule details:<table><tr><td>Schedule ID:{{code}}<td>Schedule type:{{type}}<tr><td>Schedule start date:{{from}}<td>Schedule end date:{{to}}<tr><td><tr><td>Media details:<tr><td>Media ID:{{mediaDetails.code}}<td>Media type:{{mediaDetails.type}}<tr><td>Priority:{{mediaDetails.priority}}<td>Language:{{mediaDetails.language}}</table><br>Stores:<table>{{for data in stores}}<tr><td>{{data.storeCode}}<td>{{data.storeName}}<td>{{data.accountName}}</tr>{{/for}}</table><br>This was performed by {{updatedBy}} on {{date}}.",
+    "name": "MediaScheduleFlightingTemplate",
+    "type": "Message"
+  },
+  {
+    "data": "<p> Schedule note:<br>{{scheduleDetails.notes}}<br><br> Schedule details:<br> <table> <tr><td>Schedule ID:{{scheduleDetails.details.id}}</td><td>Schedule type:{{scheduleDetails.details.type}}</td></tr><tr><td>Schedule start date:{{scheduleDetails.details.from}}</td><td>Schedule end date:{{scheduleDetails.details.to}}</td></tr></table> Media details:<br> <table> <tr><td>Media ID:{{scheduleDetails.details.mediaItemId}}</td><td>Media type:{{mediaDetails.type}}</td></tr><tr><td>Priority:{{mediaDetails.priority}}</td><td>Language:{{mediaDetails.language}}</td></tr></table> Store list: <table>{{for data in stores}}<tr><td>{{data.storeCode}}</td><td>{{data.storeName}}</td><td>{{data.accountName}}</td></tr>{{/for}}</table> <br> This note was added by{{userName}}}on date{{date}}.</p>",
+    "name": "MediaScheduleNoteAddedTemplate",
+    "type": "Message"
+  },
+  {
+    "data": "<p>Schedule details:<table><tr><td>Schedule ID:{{code}}<td>Schedule type:{{type}}<tr><td>Schedule start date:{{from}}<td>Schedule end date:{{to}}<tr><td><tr><td>Media details:<tr><td>Media ID:{{mediaDetails.code}}<td>Media type:{{mediaDetails.type}}<tr><td>Priority:{{mediaDetails.priority}}<td>Language:{{mediaDetails.language}}</table><br>Stores:<table>{{for data in stores}}<tr><td>{{data.storeCode}}<td>{{data.storeName}}<td>{{data.accountName}}</tr>{{/for}}</table><br>This was performed by {{updatedBy}} on {{date}}.",
+    "name": "MediaScheduledTemplate",
+    "type": "Message"
+  },
+  {
+    "data": "<p>Schedule details:<table><tr><td>Schedule ID:{{code}}<td>Schedule type:{{type}}<tr><td>Schedule start date:{{from}}<td>Schedule end date:{{to}}<tr><td><tr><td>Media details:<tr><td>Media ID:{{mediaDetails.code}}<td>Media type:{{mediaDetails.type}}<tr><td>Priority:{{mediaDetails.priority}}<td>Language:{{mediaDetails.language}}</table><br>Stores:<table>{{for data in stores}}<tr><td>{{data.storeCode}}<td>{{data.storeName}}<td>{{data.accountName}}</tr>{{/for}}</table><br>This was performed by {{updatedBy}} on {{date}}.",
+    "name": "MediaUnscheduledTemplate",
+    "type": "Message"
+  },
+  {
+    "data": "<p>{{title}} schedule has been deleted by an administrator.<br><br>Schedule details:<table><tr><td>Schedule ID:{{code}}<td>Schedule type:{{type}}<tr><td>Schedule start date:{{from}}<td>Schedule end date:{{to}}<tr><td><tr><td>Media details:<tr><td>Media ID:{{mediaDetails.code}}<td>Media type:{{mediaDetails.type}}<tr><td>Priority:{{mediaDetails.priority}}<td>Language:{{mediaDetails.language}}</table><br>Stores:<table>{{for data in stores}}<tr><td>{{data.storeCode}}<td>{{data.storeName}}<td>{{data.accountName}}</tr>{{/for}}</table><br>If you believe this to be in error, please contact our support team.<br>The Radio Retail team.",
+    "name": "MediaScheduleDeletedTemplate",
+    "type": "Email"
+  },
+  {
+    "data": "<p>Schedule details:<table><tr><td>Schedule ID:{{code}}<td>Schedule type:{{type}}<tr><td>Schedule start date:{{from}}<td>Schedule end date:{{to}}<tr><td><tr><td>Media details:<tr><td>Media ID:{{mediaDetails.code}}<td>Media type:{{mediaDetails.type}}<tr><td>Priority:{{mediaDetails.priority}}<td>Language:{{mediaDetails.language}}</table><br>Stores:<table>{{for data in stores}}<tr><td>{{data.storeCode}}<td>{{data.storeName}}<td>{{data.accountName}}</tr>{{/for}}</table><br>If you believe this to be in error, please contact our support team.<br>The Radio Retail team.",
+    "name": "MediaScheduledTemplate",
+    "type": "Email"
+  },
+  {
+    "data": "<p>Schedule details:<table><tr><td>Schedule ID:{{code}}<td>Schedule type:{{type}}<tr><td>Schedule start date:{{from}}<td>Schedule end date:{{to}}<tr><td><tr><td>Media details:<tr><td>Media ID:{{mediaDetails.code}}<td>Media type:{{mediaDetails.type}}<tr><td>Priority:{{mediaDetails.priority}}<td>Language:{{mediaDetails.language}}</table><br>Stores:<table>{{for data in stores}}<tr><td>{{data.storeCode}}<td>{{data.storeName}}<td>{{data.accountName}}</tr>{{/for}}</table><br>If you believe this to be in error, please contact our support team.<br>The Radio Retail team.",
+    "name": "MediaUnscheduledTemplate",
+    "type": "Email"
+  },
+  {
+    "data" : "<p>{{title}} schedule has been deleted by an administrator.<br><br><table>Schedule details:<tr><td>Schedule ID: {{code}}<tr><td>Schedule start date: {{from}}<td>Schedule end date: {{to}}</table><br>Music Profiles:<ul>{{for data in itemNames}}<li>{{data.name}}</li>{{/for}}</ul><table><tr><td>Store list:</tr>{{for data in stores}}<tr><td>{{data.storeCode}}<td>{{data.storeName}}<td>{{data.accountName}}</tr>{{/for}}</table><br>If you believe this to be in error, please contact our support team.<br>The Radio Retail team.",
+    "name" : "MusicProfileScheduleDeletedTemplate",
+    "type" : "Email"
+  },
+  {
+    "data" : "<p>{{title}} schedule has been deleted by an administrator.<br><br><table>Schedule details:<tr><td>Schedule ID: {{code}}<tr><td>Schedule start date: {{from}}<td>Schedule end date: {{to}}</table><br>Format Clocks:<ul>{{for data in itemNames}}<li>{{data.name}}</li>{{/for}}</ul><table><tr><td>Store list:</tr>{{for data in stores}}<tr><td>{{data.storeCode}}<td>{{data.storeName}}<td>{{data.accountName}}</tr>{{/for}}</table><br>If you believe this to be in error, please contact our support team.<br>The Radio Retail team.",
+    "name" : "FormatClockScheduleDeletedTemplate",
+    "type" : "Email"
+  }
+]

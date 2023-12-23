@@ -1,0 +1,17 @@
+[
+  {
+    "data": "<p>{{title}} has been deleted by an administrator.<br><br>Format clock details:<br>Format clock ID: {{details.code}}<br>Format clock description: {{details.description}}<br><br>The following associated schedules will be affected:<table>{{for data in schedules}}<tr><td>{{data.code}}<td>{{data.description}}</tr>{{/for}}</table><br>This was performed by {{updatedBy}}} on {{date}}.",
+    "name": "FormatClockDeletedTemplate",
+    "type": "Message"
+  },
+  {
+    "data": "<p>{{title}} format clock has been marked as inactive.<br><br>The following associated schedules will be affected:<br><ul>{{for data in schedules}}<li>{{data.description}}</li>{{/for}}</ul><br><br>This was performed by {{updatedBy}}} on {{date}}.",
+    "name": "FormatClockInactiveTemplate",
+    "type": "Message"
+  },
+  {
+    "data": "<p>{{title}} has been deleted by an administrator.<br><br>Format clock details:<br>Format clock ID: {{details.code}}<br>Format clock description: {{details.description}}<br><br>The following associated schedules will be affected:<table>{{for data in schedules}}<tr><td>{{data.code}}<td>{{data.description}}</tr>{{/for}}</table><br>If you believe this to be in error, please contact our support team.<br>The Radio Retail team.",
+    "name": "FormatClockDeletedTemplate",
+    "type": "Email"
+  }
+]

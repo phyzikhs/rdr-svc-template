@@ -1,0 +1,17 @@
+[
+  {
+    "data" : "<p>{{title}} has been marked as inactive.<br><br>The following associated accounts will be affected:<br><ul>{{for data in affectedEntities}}<li>{{data.name}}</li>{{/for}}</ul><br>This was performed by {{updatedBy}} on {{date}}.</p>",
+    "name" : "ClientDeactivatedTemplate",
+    "type" : "Message"
+  },
+  {
+    "data" : "<p>{{title}} has been deleted by an administrator.<br><br>The following associated accounts will be affected:<br><ul>{{for data in affectedEntities}}<li>{{data.name}}</li>{{/for}}</ul><br>This was performed by {{updatedBy}} on {{date}}.</p>",
+    "name" : "ClientDeletedTemplate",
+    "type" : "Message"
+  },
+  {
+    "data" : "<p>{{title}} has been deleted by an administrator.<br><br>The following associated accounts will be affected:<br><ul>{{for data in affectedEntities}}<li>{{data.name}}</li>{{/for}}</ul><br>If you believe this to be in error, please contact our support team.<br><br> The Radio Retail team.</p>",
+    "name" : "ClientDeletedTemplate",
+    "type" : "Email"
+  }
+]

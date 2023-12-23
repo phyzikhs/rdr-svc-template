@@ -1,0 +1,17 @@
+[
+  {
+    "data" : "<p>{{title}} album has been marked as inactive.<br><br>The following tracks will be affected: {{for data in tracks}}<li>{{data.name}}</li>{{/for}}<br><br>This was performed by {{updatedBy}} on {{date}}.",
+    "name" : "AlbumInactiveTemplate",
+    "type" : "Message"
+  },
+  {
+    "data" : "<p>{{title}} album has been deleted by an administrator.<br><br>Album Details:<table><tr><td>album ID: {{code}}<td><td>Artist: {{artist}}</table>Genres: {{for data in genres}}<li>{{data.name}}</li>{{/for}}<br><br>The following tracks will be affected: {{for data in tracks}}<li>{{data.name}}</li>{{/for}}<br><br>This was performed by {{updatedBy}} on {{date}}.",
+    "name" : "AlbumDeletedTemplate",
+    "type" : "Message"
+  },
+  {
+    "data" : "<p>{{title}} album has been deleted by an administrator.<br><br>Album Details:<table><tr><td>album ID: {{code}}<td><td>Artist: {{artist}}</table>Genres: {{for data in genres}}<li>{{data.name}}</li>{{/for}}<br><br>The following tracks will be affected: {{for data in tracks}}<li>{{data.name}}</li>{{/for}}<br><br>If you believe this to be in error, please contact our support team.<br>The Radio Retail team.",
+    "name" : "AlbumDeletedTemplate",
+    "type" : "Email"
+  }
+]

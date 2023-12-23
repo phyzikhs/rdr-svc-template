@@ -1,0 +1,32 @@
+[
+  {
+    "data" : "<p>{{title}} category has been deleted by an administrator.<br/><br/>The following associated products will be affected:<br/><ul>{{for data in affectedEntities}}<li>{{data.name}}</li>{{/for}}</ul><br/>This was performed by {{updatedBy}} on {{date}}.</p>",
+    "name" : "CategoryDeletedTemplate",
+    "type" : "Message"
+  },
+  {
+    "data" : "<p>{{title}} category has been deleted by an administrator.<br/><br/>The following associated products will be affected:<br/><ul>{{for data in affectedEntities}}<li>{{data.name}}</li>{{/for}}</ul><br/>This was performed by {{updatedBy}} on {{date}}.</p>",
+    "name" : "SubCategoryDeletedTemplate",
+    "type" : "Message"
+  },
+  {
+    "data" : "<p>{{title}} product has been deleted by an administrator.<br/><br/><table><tr><td>Product details:</td><tr><tr><td>UPC barcode: {{details.barcode}}</td><td>Description: {{details.description}}</td></tr><tr><td>Main category: {{mainCategory}}</td><td>Subcategory: {{subCategory}}</td></tr><tr><td>Unit of measure: {{details.uom}}</td></tr></table><br/>If you believe this to be in error, please contact our support team.<br/>This was performed by {{updatedBy}} on {{date}}.</p>",
+    "name" : "ProductDeletedTemplate",
+    "type" : "Message"
+  },
+  {
+    "data" : "<p>{{title}} category has been deleted by an administrator.<br/><br/>The following associated products will be affected:<br/><ul>{{for data in affectedEntities}}<li>{{data.name}}</li>{{/for}}</ul><br/>If you believe this to be in error, please contact our support team.<br/>The Radio Retail team.</p>",
+    "name" : "CategoryDeletedTemplate",
+    "type" : "Email"
+  },
+  {
+    "data" : "<p>{{title}} category has been deleted by an administrator.<br/><br/>The following associated products will be affected:<br/><ul>{{for data in affectedEntities}}<li>{{data.name}}</li>{{/for}}</ul><br/>If you believe this to be in error, please contact our support team.<br/>The Radio Retail team.</p>",
+    "name" : "SubCategoryDeletedTemplate",
+    "type" : "Email"
+  },
+  {
+    "data" : "<p>{{title}} product has been deleted by an administrator.<br/><br/><table><tr><td>Product details:</td><tr><tr><td>UPC barcode: {{details.barcode}}</td><td>Description: {{details.description}}</td></tr><tr><td>Main category: {{mainCategory}}</td><td>Subcategory: {{subCategory}}</td></tr><tr><td>Unit of measure: {{details.uom}}</td></tr></table><br/>If you believe this to be in error, please contact our support team.<br/>The Radio Retail team.</p>",
+    "name" : "ProductDeletedTemplate",
+    "type" : "Email"
+  }
+]

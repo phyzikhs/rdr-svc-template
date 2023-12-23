@@ -1,0 +1,17 @@
+[
+  {
+    "data" : "<p>{{title}} has been deleted by an administrator.<br/>This was performed by {{updatedBy}} on {{date}}.</p>",
+    "name" : "StoreDeletedTemplate",
+    "type" : "Message"
+  },
+  {
+    "data" : "<p>{{title}} has been marked as inactive.<br/>This was performed by {{updatedBy}} on {{date}}.</p>",
+    "name" : "StoreDeactivatedTemplate",
+    "type" : "Message"
+  },
+  {
+    "data" : "<p>{{title}} has been deleted by an administrator.<br>If you believe this to be in error, please contact our support team.<br><br> The Radio Retail team.</p>",
+    "name" : "StoreDeletedTemplate",
+    "type" : "Email"
+  }
+]

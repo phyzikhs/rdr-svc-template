@@ -1,0 +1,17 @@
+[
+  {
+    "data": "<p>{{title}} music profile has been deleted by an administrator.<br><br>Music profile details:<br><br>Profile ID: {{code}}<br>Description: {{description}}<br>Genres:<br><ul>{{for data in genres}}<li>{{data.name}}</li>{{/for}}</ul><br>Client details:<br>Client: {{client}}<br>Accounts:<br><ul>{{for data in accounts}}<li>{{data.name}}</li>{{/for}}</ul><br>The following associated schedule will be affected:<br><ul>{{for data in schedules}}<li>{{data.description}}</li>{{/for}}</ul><br>This was performed by {{updatedBy}}} on {{date}}.",
+    "name": "MusicProfileDeletedTemplate",
+    "type": "Message"
+  },
+  {
+    "data": "<p>{{title}} music profile has been marked as inactive.<br><br>The following associated schedules will be affected:<br><ul>{{for data in schedules}}<li>{{data.description}}</li>{{/for}}</ul><br>This was performed by {{updatedBy}} on {{date}}.",
+    "name": "MusicProfileInactiveTemplate",
+    "type": "Message"
+  },
+  {
+    "data": "<p>{{title}} music profile has been deleted by an administrator.<br><br>Music profile details:<br><br>Profile ID: {{code}}<br>Description: {{description}}<br>Genres:<br><ul>{{for data in genres}}<li>{{data.name}}</li>{{/for}}</ul><br>Client details:<br>Client: {{client}}<br>Accounts:<br><ul>{{for data in accounts}}<li>{{data.name}}</li>{{/for}}</ul><br>The following associated schedule will be affected:<br><ul>{{for data in schedules}}<li>{{data.description}}</li>{{/for}}</ul><br>If you believe this to be in error, please contact our support team.<br>The Radio Retail team.",
+    "name": "MusicProfileDeletedTemplate",
+    "type": "Email"
+  }
+]

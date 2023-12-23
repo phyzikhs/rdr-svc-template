@@ -1,0 +1,32 @@
+[
+  {
+    "data": "<p>{{title}} production ticket has been created by {{updatedBy}}.<br><br>Job details:<br/><table><tr><td>Job ID: {{jobDetails.code}}</td><td>Job received: {{jobReceived}}</td></tr><tr><td>Job created by: {{createdBy}}</td><td>Client: {{client}}</td></tr><tr><td>Product details:</td></tr><tr><td>Product: {{productDetails.name}}</td><td>Description: {{productDetails.description}}</td></tr><tr><td>Category: {{productDetails.category}}</td><td>Subcategory: {{productDetails.subCategory}}</td></tr><tr><td>Media Details:</td></tr><tr><td>Media Type: {{jobDetails.mediaDetails.type}}</td></tr><tr><td>Priority: {{jobDetails.mediaDetails.priority}}</td><td>Expiry date: {{mediaExpiration}}</td></tr><tr><td>Agency: {{agency}}</td><td>Voice over: {{voiceOver}}</td></tr><tr><td>Language: {{jobDetails.productionDetails.locale}}</td><td>Gaps: {{gaps}}</td></tr></table>Script:<br/>{{jobDetails.productionDetails.script}}<br><br>This production ticket was created on {{date}} and is due by {{dueDate}}.</p>",
+    "name": "ProductionTicketCreatedTemplate",
+    "type": "Message"
+  },
+  {
+    "data": "<p>{{title}} production ticket has been deleted by an administrator.<br><br>Job details:<br/><table><tr><td>Job ID: {{jobDetails.code}}</td><td>Job received: {{jobReceived}}</td></tr><tr><td>Job created by: {{createdBy}}</td><td>Client: {{client}}</td></tr><tr><td>Product details:</td></tr><tr><td>Product: {{productDetails.name}}</td><td>Description: {{productDetails.description}}</td></tr><tr><td>Category: {{productDetails.category}}</td><td>Subcategory: {{productDetails.subCategory}}</td></tr><tr><td>Media Details:</td></tr><tr><td>Media Type: {{jobDetails.mediaDetails.type}}</td></tr><tr><td>Priority: {{jobDetails.mediaDetails.priority}}</td><td>Expiry date: {{mediaExpiration}}</td></tr><tr><td>Agency: {{agency}}</td><td>Voice over: {{voiceOver}}</td></tr><tr><td>Language: {{jobDetails.productionDetails.locale}}</td><td>Gaps: {{gaps}}</td></tr></table>Script:<br/>{{jobDetails.productionDetails.script}}<br><br>The associated media file will be affected.<br>This was performed by {{updatedBy}} on {{date}}.</p>",
+    "name": "ProductionTicketDeletedTemplate",
+    "type": "Message"
+  },
+  {
+    "data": "<p>Job details:<br/><table><tr><td>Job ID: {{jobDetails.code}}</td><td>Job received: {{jobReceived}}</td></tr><tr><td>Job created by: {{createdBy}}</td><td>Client: {{client}}</td></tr><tr><td>Product details:</td></tr><tr><td>Product: {{productDetails.name}}</td><td>Description: {{productDetails.description}}</td></tr><tr><td>Category: {{productDetails.category}}</td><td>Subcategory: {{productDetails.subCategory}}</td></tr><tr><td>Media Details:</td></tr><tr><td>Media Type: {{jobDetails.mediaDetails.type}}</td></tr><tr><td>Priority: {{jobDetails.mediaDetails.priority}}</td><td>Expiry date: {{mediaExpiration}}</td></tr><tr><td>Agency: {{agency}}</td><td>Voice over: {{voiceOver}}</td></tr><tr><td>Language: {{jobDetails.productionDetails.locale}}</td><td>Gaps: {{gaps}}</td></tr></table>Script:<br/>{{jobDetails.productionDetails.script}}<br><br>This production ticket was created on {{date}} and is due by {{dueDate}}.</p>",
+    "name": "ProductionTicketDueSoonTemplate",
+    "type": "Message"
+  },
+  {
+    "data": "<p>Job details:<br/><table><tr><td>Job ID: {{jobDetails.code}}</td><td>Job received: {{jobReceived}}</td></tr><tr><td>Job created by: {{createdBy}}</td><td>Client: {{client}}</td></tr><tr><td>Product details:</td></tr><tr><td>Product: {{productDetails.name}}</td><td>Description: {{productDetails.description}}</td></tr><tr><td>Category: {{productDetails.category}}</td><td>Subcategory: {{productDetails.subCategory}}</td></tr><tr><td>Media Details:</td></tr><tr><td>Media Type: {{jobDetails.mediaDetails.type}}</td></tr><tr><td>Priority: {{jobDetails.mediaDetails.priority}}</td><td>Expiry date: {{mediaExpiration}}</td></tr><tr><td>Agency: {{agency}}</td><td>Voice over: {{voiceOver}}</td></tr><tr><td>Language: {{jobDetails.productionDetails.locale}}</td><td>Gaps: {{gaps}}</td></tr></table>Script:<br/>{{jobDetails.productionDetails.script}}<br><br>This production ticket was created on {{date}} and was due by {{dueDate}}.</p>",
+    "name": "ProductionTicketOverdueTemplate",
+    "type": "Message"
+  },
+  {
+    "data": "<p>{{title}} production ticket has been closed by {{updatedBy}}.<br><br>Job details:<br/><table><tr><td>Job ID: {{jobDetails.code}}</td><td>Job received: {{jobReceived}}</td></tr><tr><td>Job created by: {{createdBy}}</td><td>Client: {{client}}</td></tr><tr><td>Product details:</td></tr><tr><td>Product: {{productDetails.name}}</td><td>Description: {{productDetails.description}}</td></tr><tr><td>Category: {{productDetails.category}}</td><td>Subcategory: {{productDetails.subCategory}}</td></tr><tr><td>Media Details:</td></tr><tr><td>Media Type: {{jobDetails.mediaDetails.type}}</td></tr><tr><td>Priority: {{jobDetails.mediaDetails.priority}}</td><td>Expiry date: {{mediaExpiration}}</td></tr><tr><td>Agency: {{agency}}</td><td>Voice over: {{voiceOver}}</td></tr><tr><td>Language: {{jobDetails.productionDetails.locale}}</td><td>Gaps: {{gaps}}</td></tr></table>Script:<br/>{{jobDetails.productionDetails.script}}</p>",
+    "name": "ProductionTicketClosedTemplate",
+    "type": "Message"
+  },
+  {
+    "data": "<p>{{title}} production ticket has been deleted by an administrator.<br><br>Job details:<br><table><tr><td>Job ID: {{jobDetails.code}}</td><td>Job received: {{jobReceived}}</td></tr><tr><td>Job created by: {{createdBy}}</td><td>Client: {{client}}</td></tr><tr><td>Product details:</td></tr><tr><td>Product: {{productDetails.name}}</td><td>Description: {{productDetails.description}}</td></tr><tr><td>Category: {{productDetails.category}}</td><td>Subcategory: {{productDetails.subCategory}}</td></tr><tr><td>Media Details:</td></tr><tr><td>Media Type: {{jobDetails.mediaDetails.type}}</td></tr><tr><td>Priority: {{jobDetails.mediaDetails.priority}}</td><td>Expiry date: {{mediaExpiration}}</td></tr><tr><td>Agency: {{agency}}</td><td>Voice over: {{voiceOver}}</td></tr><tr><td>Language: {{jobDetails.productionDetails.locale}}</td><td>Gaps: {{gaps}}</td></tr></table>Script:<br>{{jobDetails.productionDetails.script}}<br><br>The associated media file will be affected.<br>If you believe this to be in error, please contact our support team.<br>The Radio Retail team.</p>",
+    "name": "ProductionTicketDeletedTemplate",
+    "type": "Email"
+  }
+]
